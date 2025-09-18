@@ -3,3 +3,11 @@
 :root {
   background-color: chocolate;
 }
+
+#root {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 0.5fr;
+  grid-template-rows: 0.125fr 1fr;
+  height: 100vh;
+  width: 100vw;
+}
