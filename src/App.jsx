@@ -1,7 +1,10 @@
 import "./App.css";
+import Thumbnails from "./components/Thumbnails";
 
-function App() {
-  return <></>;
+export default function App() {
+  return (
+    <>
+      <Thumbnails></Thumbnails>
+    </>
+  );
 }
-
-export default App;
