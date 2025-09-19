@@ -22,7 +22,6 @@ export default function Thumbnails() {
       const response = await fetch(import.meta.env.VITE_FROG_API);
       const data = await response.json();
       setItems(data);
-      // Set first image as default
       if (data.length > 0) {
         setMyState(data[0]);
       }
@@ -32,7 +31,7 @@ export default function Thumbnails() {
   }, []);
 
   const handleThumbnailClick = (item) => {
-    setMyState(item); // Update the state when a thumbnail is clicked
+    setMyState(item);
   };
 
   return (
