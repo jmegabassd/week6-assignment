@@ -1,8 +1,23 @@
 .thumb-cont {
-  background-color: chartreuse;
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 1;
-  grid-row-end: 2;
   z-index: 30;
+  display: flex;
+  overflow: auto;
+  scroll-behavior: smooth;
+  position: fixed;
+  width: 500px;
+  height: 150px;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+}
+
+.thumb-cont img {
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.thumb-cont img:hover {
+  cursor: pointer;
 }
