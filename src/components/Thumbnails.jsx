@@ -1,11 +1,13 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import "./Thumbnails.css";
 import MainImage from "./MainImage";
 import ThumbnailImage from "./ThumbnailImage";
+import Buttons from "./Buttons";
 
 export default function Thumbnails() {
   const [items, setItems] = useState([]);
-  const [myState, setMyState] = useState([]);
+  const [myState, setMyState] = useState(0);
+  const thumbnailRefs = useRef({});
 
   useEffect(() => {
     async function fetchData() {
@@ -20,6 +22,30 @@ export default function Thumbnails() {
     fetchData();
   }, []);
 
+  useEffect(() => {
+    if (myState && thumbnailRefs.current[myState.id]) {
+      thumbnailRefs.current[myState.id].scrollIntoView({
+        behavior: "smooth",
+        inline: "center",
+        block: "nearest",
+      });
+    }
+  }, [myState]);
+
+  const onNextClick = () => {
+    const currentIndex = items.findIndex((item) => item.id === myState.id);
+    if (currentIndex < items.length - 1) {
+      setMyState(items[currentIndex + 1]);
+    }
+  };
+
+  const onPreviousClick = () => {
+    const currentIndex = items.findIndex((item) => item.id === myState.id);
+    if (currentIndex > 0) {
+      setMyState(items[currentIndex - 1]);
+    }
+  };
+
   const handleThumbnailClick = (item) => {
     setMyState(item);
   };
@@ -27,16 +53,18 @@ export default function Thumbnails() {
   return (
     <>
       <MainImage item={myState} />
-      <div className="thumb-cont">
+      <div className="thumb-cont" ref={thumbnailRefs}>
         {items.map((item) => (
           <ThumbnailImage
             key={item.id}
             item={item}
             onClick={handleThumbnailClick}
-            isSelected={myState.id === item.id}
+            isSelected={myState && myState.id === item.id}
+            ref={(el) => (thumbnailRefs.current[item.id] = el)}
           />
         ))}
       </div>
+      <Buttons onPreviousClick={onPreviousClick} onNextClick={onNextClick} />
     </>
   );
 }

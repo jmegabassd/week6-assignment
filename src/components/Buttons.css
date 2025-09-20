@@ -1,0 +1,59 @@
+.btn {
+  all: unset; /* button reset */
+  width: 50px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 35px;
+  font-weight: bolder;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+}
+
+.btn:hover {
+  cursor: pointer;
+  border: 1px solid white;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+#left-btn {
+  position: absolute;
+  left: 60px;
+  bottom: 50%;
+}
+
+#right-btn {
+  position: absolute;
+  right: 60px;
+  bottom: 50%;
+}
+
+@media only screen and (max-width: 480px) {
+  #left-btn {
+    position: absolute;
+    left: 10px;
+    bottom: 90px;
+  }
+
+  #right-btn {
+    position: absolute;
+    right: 10px;
+    bottom: 90px;
+  }
+}
+
+@media only screen and (max-width: 932px) and (orientation: landscape) {
+  #left-btn {
+    position: absolute;
+    left: 110px;
+    bottom: 5px;
+  }
+
+  #right-btn {
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+  }
+}
