@@ -1,17 +1,7 @@
 import { useState, useEffect } from "react";
 import "./Thumbnails.css";
 import MainImage from "./MainImage";
-
-function ThumbnailImage({ item, onClick }) {
-  return (
-    <img
-      onClick={() => onClick(item)}
-      src={item.url}
-      alt={item.alt}
-      className="thumbnail-item"
-    />
-  );
-}
+import ThumbnailImage from "./ThumbnailImage";
 
 export default function Thumbnails() {
   const [items, setItems] = useState([]);
@@ -37,13 +27,13 @@ export default function Thumbnails() {
   return (
     <>
       <MainImage item={myState} />
-
       <div className="thumb-cont">
         {items.map((item) => (
           <ThumbnailImage
             key={item.id}
             item={item}
             onClick={handleThumbnailClick}
+            isSelected={myState.id === item.id}
           />
         ))}
       </div>
