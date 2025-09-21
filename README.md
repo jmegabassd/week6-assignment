@@ -2,19 +2,27 @@
 
 > Please also provide an assignment reflection in your project README.md file.
 
-# Required
+## Required
 
-> 🎯 What requirements did you achieve?
->
-> 🎯 Were there any requirements or goals that you were unable to achieve?
->
-> 🎯 If so, what was it that you found difficult about these tasks?
+### 🎯 What requirements did you achieve?
 
-# Optional
+> useState was used to manage thumbnails clicked
+> useEffect was uysed to call the API
+> I split the JSX files for buttons mainImage and Thumbnails
+> .map() was used for the thumbnails
+> When clicked on the thumbnail apples to fullscreen
+> All images have the alt text pulled from API and can be shown when the main image is clicked on
+> I enabled basic keyboard nav for the thumbnails, can tab through them and select with enter or space
+
+### 🎯 Were there any requirements or goals that you were unable to achieve?
+
+> I felt I met all the requiremnents
+
+## Optional
 
 🏹 Feel free to add any other reflections you would like to share about your submission, for example:
 
-# What useful external sources helped you complete the assignment (e.g Youtube tutorials)?
+## What useful external sources helped you complete the assignment (e.g Youtube tutorials)?
 
 > (https://nightwatchjs.org/api/isSelected.html)
 >
@@ -38,8 +46,8 @@
 >
 > (https://toolstud.io/web/charmap.php?encoded=rsaquo)
 
-# What errors or bugs did you encounter while completing your assignment? How did you solve them?
+## What errors or bugs did you encounter while completing your assignment? How did you solve them?
 
 >
 
-# What went really well and what could have gone better?
+## What went really well and what could have gone better?
