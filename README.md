@@ -51,6 +51,8 @@
 > (https://www.w3schools.com/howto/howto_css_next_prev.asp)
 >
 > (https://toolstud.io/web/charmap.php?encoded=rsaquo)
+>
+> (https://cookie-script.com/how-to-block-third-party-cookies.html)
 
 ## What errors or bugs did you encounter while completing your assignment? How did you solve them?
 
@@ -65,3 +67,5 @@
 > Initially used "import { forwardRef } from 'react';" upon reading up discovered this was now available as a prop so removed the import and set ref in ThumbnailImage({ item, onClick, isSelected, ref }).
 >
 > Decided against using Grid! for once... Although this felt a bit odd as a grid addict I felt this simple page layout didn't require grid which would add unnecessary complexitry to the page especially when using @media.
+>
+> Render setup went really well, took a couple of minutes!
