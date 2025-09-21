@@ -4,7 +4,7 @@ import ThumbnailImage from "./components/ThumbnailImage";
 import Buttons from "./components/Buttons";
 import "./App.css";
 
-export default function Thumbnails() {
+export default function App() {
   const [items, setItems] = useState([]);
   const [myState, setMyState] = useState(0);
   const thumbnailRefs = useRef({});
